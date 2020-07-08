@@ -1,11 +1,11 @@
 import React from 'react';
 import { AuthProvider } from 'context/AuthContext';
-import Login from 'components/Login';
+import Home from 'containers/Home';
 
 const App = () => {
   return (
     <AuthProvider>
-      <Login />
+      <Home />
     </AuthProvider>
   );
 };
