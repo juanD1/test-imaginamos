@@ -1,5 +1,5 @@
 import React from 'react';
-import { CurrentUser } from 'context/AuthContext';
+import { CurrentUser } from 'types/users';
 import { Wrapper, Img, WrapperUserInfo, Label } from './styles';
 
 type Props = {

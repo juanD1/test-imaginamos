@@ -1,13 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { app } from 'firebase/config';
-import { User as FirebaseUser } from 'firebase/types';
 import { GlobalProps } from 'types/globalTypes';
-
-export type CurrentUser = {
-  displayName: string;
-  photoURL: string;
-  email: string;
-};
+import { CurrentUser, FirebaseUser } from 'types/users';
 
 const initialValue: CurrentUser = {
   displayName: 'dummy',

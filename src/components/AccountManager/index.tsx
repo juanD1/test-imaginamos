@@ -1,7 +1,7 @@
 import React from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { app, googleAuthProvider, facebookAuthProvider } from 'firebase/config';
-import { CurrentUser } from 'context/AuthContext';
+import { CurrentUser } from 'types/users';
 import InformactionAccount from './InformactionAccount';
 import { Wrapper } from './InformactionAccount/styles';
 
