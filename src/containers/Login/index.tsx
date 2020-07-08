@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { AuthContext } from 'context/AuthContext';
 import AccountManager from 'components/AccountManager';
 import unauthUser from 'assets/icons/747376.svg';
+import { Img } from './styles';
 
 const Login = () => {
   const user = useContext(AuthContext);
@@ -9,16 +10,11 @@ const Login = () => {
 
   return (
     <>
-      <img
-        className="rounded-circle"
-        style={{
-          width: 40,
-          height: 40,
-          backgroundColor: '#9E9E9E',
-          float: 'right',
-        }}
+      <Img
+        className={user && 'rounded-circle'}
         src={!user ? unauthUser : user.photoURL}
         alt="icon-unauthenticated-user"
+        currentUser={!!user}
         onClick={() => setShowAccountManager(!showAccountManager)}
       />
       {showAccountManager && (
