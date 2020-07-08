@@ -11,7 +11,12 @@ const Login = () => {
     <>
       <img
         className="rounded-circle"
-        style={{ width: 40, height: 40, backgroundColor: 'gray' }}
+        style={{
+          width: 40,
+          height: 40,
+          backgroundColor: '#9E9E9E',
+          float: 'right',
+        }}
         src={!user ? unauthUser : user.photoURL}
         alt="icon-unauthenticated-user"
         onClick={() => setShowAccountManager(!showAccountManager)}

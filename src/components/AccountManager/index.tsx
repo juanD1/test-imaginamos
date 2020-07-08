@@ -2,6 +2,8 @@ import React from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { app, googleAuthProvider, facebookAuthProvider } from 'firebase/config';
 import { CurrentUser } from 'context/AuthContext';
+import InformactionAccount from './InformactionAccount';
+import { Wrapper } from './InformactionAccount/styles';
 
 type Props = {
   showAuth: boolean;
@@ -27,20 +29,15 @@ const AccountManager = ({ user, showAuth, setShowAccountManager }: Props) => {
   };
 
   return (
-    <div style={{ width: 300, height: 300, backgroundColor: 'gray' }}>
+    <>
       {user && showAuth ? (
-        <>
-          <img className="rounded-circle" src={user.photoURL} alt="user" />
-          <span>{user.displayName}</span>
-          <span>{user.email}</span>
-          <button type="button" className="btn btn-light" onClick={signOut}>
-            Sign Out
-          </button>
-        </>
+        <InformactionAccount user={user} signOut={signOut} />
       ) : (
-        <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={app.auth()} />
+        <Wrapper>
+          <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={app.auth()} />
+        </Wrapper>
       )}
-    </div>
+    </>
   );
 };
 
