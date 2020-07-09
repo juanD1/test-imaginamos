@@ -2,6 +2,7 @@ import React from 'react';
 import { GlobalProps } from 'types/globalTypes';
 import Nav from 'containers/Nav';
 import News from 'components/News';
+import Categories from 'containers/Categories';
 import { Wrapper } from 'styles/globalStyles';
 
 const Content = ({ children }: GlobalProps) => (
@@ -15,7 +16,9 @@ const Content = ({ children }: GlobalProps) => (
         </div>
       </div>
       <div className="row" style={{ backgroundColor: 'orange' }}>
-        <div className="col">{/* Categories */}</div>
+        <div className="col">
+          <Categories />
+        </div>
       </div>
       <div className="row" style={{ backgroundColor: 'yellow' }}>
         <div className="col">{/* Prod */}</div>

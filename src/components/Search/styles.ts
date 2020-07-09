@@ -21,7 +21,7 @@ export const Input = styled.input`
   border-radius: 10px;
   outline: none !important;
   border: 0;
-  height: 35px;
+  height: 50px;
   background-color: #dddddd;
 
   /* No greater than 900px, no less than 400px */

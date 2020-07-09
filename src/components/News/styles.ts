@@ -7,6 +7,7 @@ export const MainWrapper = styled.div`
   margin: 40px 0 0;
   height: 150px;
   padding: 0 30px;
+  margin-bottom: 35px;
 `;
 
 export const LearnMoreContiner = styled.div`
