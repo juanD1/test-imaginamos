@@ -1,6 +1,8 @@
 import React from 'react';
 import { CurrentUser } from 'types/users';
-import { Wrapper, Img, WrapperUserInfo, Label } from './styles';
+import { Wrapper, WrapperUserInfo } from './styles';
+import { Img } from 'styles/globalStyles';
+import { Label } from 'styles/globalStyles';
 
 type Props = {
   signOut(): void;
@@ -9,7 +11,13 @@ type Props = {
 
 const InformactionAccount = ({ user, signOut }: Props) => (
   <Wrapper>
-    <Img className="rounded-circle" src={user.photoURL} alt="user" />
+    <Img
+      className="rounded-circle"
+      src={user.photoURL}
+      alt="user"
+      margin="auto"
+      display="block"
+    />
     <WrapperUserInfo>
       <Label fontWeight={500} fontSize="16px" lineHeight="29px">
         {user.displayName}

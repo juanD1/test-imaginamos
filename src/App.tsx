@@ -1,6 +1,6 @@
 import React from 'react';
 import { AuthProvider } from 'context/AuthContext';
-import Home from 'containers/Home';
+import Home from 'routes/Home';
 
 const App = () => {
   return (

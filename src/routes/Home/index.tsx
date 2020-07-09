@@ -1,6 +1,6 @@
 import React from 'react';
-import Content from './Content';
-import Panel from './Panel';
+import Content from 'containers/Content';
+import Panel from 'containers/Panel';
 
 const Home = () => (
   <div className="container-fluid">
