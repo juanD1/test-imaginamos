@@ -16,6 +16,9 @@ type ImgProps = {
   float?: string;
   margin?: string;
   display?: string;
+  position?: string;
+  padding?: string;
+  bottom?: string;
 };
 
 export const Img = styled.img`
@@ -24,6 +27,9 @@ export const Img = styled.img`
   float: ${(props: ImgProps) => props.float};
   margin: ${(props: ImgProps) => props.margin};
   display: ${(props: ImgProps) => props.display || 'block'};
+  position: ${(props: ImgProps) => props.position};
+  padding: ${(props: ImgProps) => props.padding};
+  bottom: ${(props: ImgProps) => props.bottom};
 `;
 
 type LabelProps = {
@@ -36,6 +42,9 @@ type LabelProps = {
   margin?: string;
   padding?: string;
   hiddenOnResponsive?: boolean;
+  bottom?: string;
+  right?: string;
+  position?: string;
 };
 
 export const Label = styled.span`
@@ -53,6 +62,9 @@ export const Label = styled.span`
   display: ${(props: LabelProps) => props.display || 'block'};
   margin: ${(props: LabelProps) => props.margin};
   padding: ${(props: LabelProps) => props.padding};
+  bottom: ${(props: LabelProps) => props.bottom};
+  right: ${(props: LabelProps) => props.right};
+  position: ${(props: LabelProps) => props.position};
 
   @media (max-width: 768px) and (min-width: 320px) {
     display: ${(props: LabelProps) => props.hiddenOnResponsive && 'none'};

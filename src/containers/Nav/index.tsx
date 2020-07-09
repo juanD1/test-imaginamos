@@ -11,7 +11,7 @@ const Nav = () => {
       <BurgerNav float="left" handleClick={() => setToggle(!toggle)} />
       <Label
         fontWeight={600}
-        fontSize="24px"
+        fontSize="22px"
         letterSpacing="0"
         margin="auto 70px auto 35px"
         padding="15px 0"

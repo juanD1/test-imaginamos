@@ -18,8 +18,8 @@ const Search = ({ toggle }: Props) => (
       style={{
         position: 'absolute',
         pointerEvents: 'none',
-        top: '1.1rem',
-        left: '1.1rem',
+        top: '.6rem',
+        left: '.6rem',
       }}
     />
   </Wrapper>
