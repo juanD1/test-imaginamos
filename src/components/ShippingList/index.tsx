@@ -1,6 +1,7 @@
 import React from 'react';
 import { SHOPPING_LIST } from 'constants/shoppingList';
 import ShippingProduct from 'components/ShippingProduct';
+import Delivery from 'components/Delivery';
 
 const ShippingList = () => (
   <div>
@@ -14,6 +15,7 @@ const ShippingList = () => (
         image={image}
       />
     ))}
+    <Delivery />
   </div>
 );
 

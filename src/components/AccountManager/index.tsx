@@ -33,7 +33,7 @@ const AccountManager = ({ user, showAuth, setShowAccountManager }: Props) => {
       {user && showAuth ? (
         <InformactionAccount user={user} signOut={signOut} />
       ) : (
-        <Wrapper>
+        <Wrapper style={{ zIndex: 1 }}>
           <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={app.auth()} />
         </Wrapper>
       )}

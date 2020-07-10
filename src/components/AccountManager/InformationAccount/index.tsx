@@ -10,7 +10,7 @@ type Props = {
 };
 
 const InformactionAccount = ({ user, signOut }: Props) => (
-  <Wrapper>
+  <Wrapper style={{ zIndex: 1 }}>
     <Img
       className="rounded-circle"
       src={user.photoURL}
