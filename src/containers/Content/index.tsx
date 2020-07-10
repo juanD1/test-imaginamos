@@ -15,7 +15,7 @@ const Content = ({ children }: GlobalProps) => (
           <News />
         </div>
       </div>
-      <div className="row" style={{ backgroundColor: 'orange' }}>
+      <div className="row">
         <div className="col">
           <Categories />
         </div>

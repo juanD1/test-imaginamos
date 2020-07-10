@@ -8,7 +8,7 @@ const options = ['Now', 'Later', 'More'];
 
 const CategoriesHeader = () => {
   return (
-    <div className="row justify-content-between">
+    <div className="row justify-content-between" style={{ paddingBottom: 35 }}>
       <div className="col-4">
         <div className="d-flex">
           <Label

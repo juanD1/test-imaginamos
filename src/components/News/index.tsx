@@ -5,8 +5,6 @@ import arrowLineOrange from 'assets/icons/arrowLineOrange.svg';
 import { Img, Label } from 'styles/globalStyles';
 import { MainWrapper, LearnMoreContiner } from './styles';
 
-// tomato	#FF6347
-
 const News = () => (
   <MainWrapper>
     <div className="row">
