@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   width: 10%;
   height: 150px;
   background-color: ${(props: WrapperProps) =>
-    props.actived ? 'yellow' : 'white'};
+    props.actived ? '#ffd645' : 'white'};
   border-radius: 50px;
   padding-top: 10px;
   display: block;

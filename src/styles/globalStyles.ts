@@ -54,6 +54,7 @@ type LabelProps = {
   right?: string;
   position?: string;
   float?: string;
+  cursor?: string;
 };
 
 export const Label = styled.span`
@@ -75,6 +76,7 @@ export const Label = styled.span`
   right: ${(props: LabelProps) => props.right};
   position: ${(props: LabelProps) => props.position};
   float: ${(props: LabelProps) => props.float};
+  cursor: ${(props: WrapperProps) => props.cursor};
 
   @media (max-width: 768px) and (min-width: 320px) {
     display: ${(props: LabelProps) => props.hiddenOnResponsive && 'none'};

@@ -5,5 +5,5 @@ export const IconWrapper = styled.div`
   height: 60px;
   margin: auto 0;
   border-radius: 15px;
-  background-color: #ffc78f;
+  background-color: #ffefe0;
 `;
