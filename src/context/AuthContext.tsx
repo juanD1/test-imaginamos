@@ -1,7 +1,10 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { app } from 'firebase/config';
-import { GlobalProps } from 'types/globalTypes';
 import { CurrentUser, FirebaseUser } from 'types/users';
+
+export type Props = {
+  children: JSX.Element;
+};
 
 const initialValue: CurrentUser = {
   displayName: 'dummy',
@@ -12,7 +15,7 @@ const initialValue: CurrentUser = {
 const AuthContext = createContext(initialValue);
 const { Provider } = AuthContext;
 
-const AuthProvider = ({ children }: GlobalProps) => {
+const AuthProvider = ({ children }: Props) => {
   const [currentUser, setCurrentUser] = useState<FirebaseUser | any>(null);
 
   useEffect(() => {

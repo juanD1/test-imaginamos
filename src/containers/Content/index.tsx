@@ -1,11 +1,10 @@
 import React from 'react';
-import { GlobalProps } from 'types/globalTypes';
 import News from 'components/News';
 import Categories from 'containers/Categories';
 import Products from 'containers/Products';
 import { Wrapper } from 'styles/globalStyles';
 
-const Content = ({ children }: GlobalProps) => (
+const Content = () => (
   <div className="col">
     <Wrapper padding="25px 30px">
       <div className="container"></div>
