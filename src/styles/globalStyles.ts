@@ -5,14 +5,22 @@ type WrapperProps = {
   display?: string;
   position?: string;
   overFlow?: string;
+  margin?: string;
   cursor?: string;
+  float?: string;
+  right?: string;
+  top?: string;
 };
 
 export const Wrapper = styled.div`
   padding: ${(props: WrapperProps) => props.padding};
   display: ${(props: WrapperProps) => props.display};
+  margin: ${(props: ImgProps) => props.margin};
   position: ${(props: WrapperProps) => props.position};
+  float: ${(props: WrapperProps) => props.float};
   overflow: ${(props: WrapperProps) => props.overFlow};
+  right: ${(props: WrapperProps) => props.right};
+  top: ${(props: WrapperProps) => props.top};
   cursor: ${(props: WrapperProps) => props.cursor};
 `;
 
@@ -53,6 +61,7 @@ type LabelProps = {
   bottom?: string;
   right?: string;
   position?: string;
+  verticalAlign?: string;
   float?: string;
   cursor?: string;
 };
@@ -76,6 +85,7 @@ export const Label = styled.span`
   right: ${(props: LabelProps) => props.right};
   position: ${(props: LabelProps) => props.position};
   float: ${(props: LabelProps) => props.float};
+  vertical-align: ${(props: LabelProps) => props.verticalAlign};
   cursor: ${(props: WrapperProps) => props.cursor};
 
   @media (max-width: 768px) and (min-width: 320px) {

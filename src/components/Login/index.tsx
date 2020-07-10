@@ -16,7 +16,7 @@ const Login = () => {
         alt="icon-unauthenticated-user"
         width={user ? '30px' : '25px'}
         height={user ? '30px' : '25px'}
-        margin="5px"
+        margin="auto 0"
         float="right"
         onClick={() => setShowAccountManager(!showAccountManager)}
       />

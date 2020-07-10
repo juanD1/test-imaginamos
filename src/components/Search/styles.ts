@@ -7,6 +7,7 @@ type WapperProps = {
 
 export const Wrapper = styled.div`
   position: relative;
+  margin: auto;
 
   @media (max-width: 768px) and (min-width: 320px) {
     display: ${(props: WapperProps) =>

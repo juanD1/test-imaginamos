@@ -6,7 +6,7 @@ import { Label, Img } from 'styles/globalStyles';
 import emoji from 'assets/icons/emoji.png';
 
 const ShoppingCar = () => (
-  <div style={{ padding: '50px' }}>
+  <div style={{ padding: '100px 50px 0' }}>
     <div>
       <div className="d-flex">
         <Label
