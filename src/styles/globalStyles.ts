@@ -3,11 +3,17 @@ import styled from 'styled-components';
 type WrapperProps = {
   padding?: string;
   display?: string;
+  position?: string;
+  overFlow?: string;
+  cursor?: string;
 };
 
 export const Wrapper = styled.div`
   padding: ${(props: WrapperProps) => props.padding};
   display: ${(props: WrapperProps) => props.display};
+  position: ${(props: WrapperProps) => props.position};
+  overflow: ${(props: WrapperProps) => props.overFlow};
+  cursor: ${(props: WrapperProps) => props.cursor};
 `;
 
 type ImgProps = {
@@ -19,6 +25,7 @@ type ImgProps = {
   position?: string;
   padding?: string;
   bottom?: string;
+  borderRadius?: string;
 };
 
 export const Img = styled.img`
@@ -30,6 +37,7 @@ export const Img = styled.img`
   position: ${(props: ImgProps) => props.position};
   padding: ${(props: ImgProps) => props.padding};
   bottom: ${(props: ImgProps) => props.bottom};
+  border-radius: ${(props: ImgProps) => props.borderRadius};
 `;
 
 type LabelProps = {
