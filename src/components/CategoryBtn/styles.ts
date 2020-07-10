@@ -29,4 +29,5 @@ export const ImgWrapper = styled.div`
   border-radius: 50%;
   margin: auto;
   padding-top: 10px;
+  border: 1px solid #9f9f9f;
 `;

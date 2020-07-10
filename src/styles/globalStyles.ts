@@ -53,6 +53,7 @@ type LabelProps = {
   bottom?: string;
   right?: string;
   position?: string;
+  float?: string;
 };
 
 export const Label = styled.span`
@@ -73,6 +74,7 @@ export const Label = styled.span`
   bottom: ${(props: LabelProps) => props.bottom};
   right: ${(props: LabelProps) => props.right};
   position: ${(props: LabelProps) => props.position};
+  float: ${(props: LabelProps) => props.float};
 
   @media (max-width: 768px) and (min-width: 320px) {
     display: ${(props: LabelProps) => props.hiddenOnResponsive && 'none'};

@@ -6,7 +6,7 @@ import { CATEGORIES } from 'constants/categories';
 
 const Categories = () => {
   const [category, setCategory] = useState<TypeCategory>({
-    categoryKey: 1,
+    categoryKey: 4,
     name: '',
     icon: '',
   });
