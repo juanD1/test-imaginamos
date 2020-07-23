@@ -1,10 +1,15 @@
 import React from 'react';
 import Counter from 'components/Counter';
+import { Products } from 'types/products';
 import arrowLine from 'assets/icons/arrowLine.svg';
 import { Label, Img } from 'styles/globalStyles';
 import { Wrapper, CheckoutWrapper } from './styles';
 
-const Checkout = () => (
+type Props = {
+  product: Products;
+};
+
+const Checkout = (props: Props) => (
   <Wrapper>
     <div className="row justify-content-between">
       <div className="col align-self-center">
@@ -16,7 +21,7 @@ const Checkout = () => (
         >
           Persons
         </Label>
-        <Counter />
+        <Counter product={props.product} />
       </div>
       <div className="col">
         <CheckoutWrapper>

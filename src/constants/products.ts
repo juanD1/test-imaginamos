@@ -7,6 +7,7 @@ export const PRODUCTS = [
     qualification: 4.9,
     time: '25-30min',
     price: 14.99,
+    quantity: 0,
     image:
       'https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=226&w=440',
   },
@@ -16,6 +17,7 @@ export const PRODUCTS = [
     qualification: 4.7,
     time: '20-25min',
     price: 9.99,
+    quantity: 0,
     image:
       'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=226&w=440',
   },
@@ -25,6 +27,7 @@ export const PRODUCTS = [
     qualification: 4.6,
     time: '25-30min',
     price: 13.99,
+    quantity: 0,
     image:
       'https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=226&w=440',
   },
@@ -34,6 +37,7 @@ export const PRODUCTS = [
     qualification: 4.5,
     time: '25-30min',
     price: 15.99,
+    quantity: 0,
     image:
       'https://images.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=226&w=440',
   },
@@ -43,6 +47,7 @@ export const PRODUCTS = [
     qualification: 4.8,
     time: '15-20min',
     price: 6.99,
+    quantity: 0,
     image:
       'https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=226&w=440',
   },
@@ -52,6 +57,7 @@ export const PRODUCTS = [
     qualification: 4.7,
     time: '10-15min',
     price: 9.99,
+    quantity: 0,
     image: sandwich, // Link was broke
   },
   {
@@ -60,6 +66,7 @@ export const PRODUCTS = [
     qualification: 4.4,
     time: '15-25min',
     price: 12.99,
+    quantity: 0,
     image:
       'https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=226&w=440',
   },
@@ -69,6 +76,7 @@ export const PRODUCTS = [
     qualification: 4.6,
     time: '10-15min',
     price: 14.99,
+    quantity: 0,
     image:
       'https://images.pexels.com/photos/156114/pexels-photo-156114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=226&w=440',
   },

@@ -4,14 +4,19 @@ import start from 'assets/icons/start.svg';
 import { Wrapper, Img, Label } from 'styles/globalStyles';
 import { TimeWrapper } from './styles';
 
+type Props = Products & {
+  handleClick: () => void;
+};
+
 const ProductCard = ({
   productName,
   qualification,
   time,
   price,
   image,
-}: Products) => (
-  <Wrapper padding="0 25px 0 0" cursor="pointer">
+  handleClick,
+}: Props) => (
+  <Wrapper padding="0 25px 0 0" cursor="pointer" onClick={handleClick}>
     <div style={{ position: 'relative' }}>
       <Img src={image} alt="product" width="250px" borderRadius="25px" />
       <TimeWrapper>

@@ -1,13 +1,25 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import actions from 'states/actions';
+import { Products } from 'types/products';
 import { Label } from 'styles/globalStyles';
 import { Wrapper } from './styles';
 
-const Counter = () => {
+type Props = {
+  product: Products;
+};
+
+const Counter = (props: Props) => {
+  const dispatch = useDispatch();
   const [quantity, setQuantity] = useState<number>(1);
 
-  const addQuantity = () => setQuantity(prevState => prevState + 1);
-  const reduceQuantity = () =>
-    quantity > 0 && setQuantity(prevState => prevState - 1);
+  // const addQuantity = () => setQuantity(prevState => prevState + 1);
+
+  // const reduceQuantity = () =>
+  //   quantity > 0 && setQuantity(prevState => prevState - 1);
+
+  const AddQuantityProduct = (product: Products) =>
+    dispatch(actions.shoppingCar.AddQuantityRequest(product));
 
   return (
     <Wrapper>
@@ -18,7 +30,7 @@ const Counter = () => {
         padding="15px 10px"
         margin="auto"
         cursor="pointer"
-        onClick={reduceQuantity}
+        // onClick={reduceQuantity}
       >
         -
       </Label>
@@ -29,7 +41,7 @@ const Counter = () => {
         padding="15px 10px"
         margin="auto"
       >
-        {quantity}
+        {props.product && props.product.quantity}
       </Label>
       <Label
         fontWeight={500}
@@ -38,7 +50,7 @@ const Counter = () => {
         padding="15px 10px"
         margin="auto"
         cursor="pointer"
-        onClick={addQuantity}
+        onClick={() => AddQuantityProduct(props.product)}
       >
         +
       </Label>

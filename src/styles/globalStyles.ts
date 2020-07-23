@@ -10,6 +10,7 @@ type WrapperProps = {
   float?: string;
   right?: string;
   top?: string;
+  actived?: boolean;
 };
 
 export const Wrapper = styled.div`
@@ -21,6 +22,8 @@ export const Wrapper = styled.div`
   overflow: ${(props: WrapperProps) => props.overFlow};
   right: ${(props: WrapperProps) => props.right};
   top: ${(props: WrapperProps) => props.top};
+  border: ${(props: WrapperProps) => props.actived && '1px solid yellow'};
+  border-radius: ${(props: WrapperProps) => props.actived && '20px'};
   cursor: ${(props: WrapperProps) => props.cursor};
 `;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Shipping from 'components/Shipping';
 import ShippingList from 'components/ShippingList';
-import Checkout from 'components/Checkout';
+// import Checkout from 'components/Checkout';
 import { Label, Img } from 'styles/globalStyles';
 import emoji from 'assets/icons/emoji.png';
 
@@ -32,7 +32,7 @@ const ShoppingCar = () => (
     </div>
     <Shipping />
     <ShippingList />
-    <Checkout />
+    {/* <Checkout /> */}
   </div>
 );
 

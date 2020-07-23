@@ -2,8 +2,26 @@ import React from 'react';
 import { Products } from 'types/products';
 import { Wrapper, Label, Img } from 'styles/globalStyles';
 
-const ShippingProduct = ({ productName, quantity, price, image }: Products) => (
-  <Wrapper display="flex" padding="10px 0">
+type Props = Products & {
+  actived: boolean;
+  handleClick: () => void;
+};
+
+const ShippingProduct = ({
+  productName,
+  quantity,
+  price,
+  image,
+  actived,
+  handleClick,
+}: Props) => (
+  <Wrapper
+    display="flex"
+    padding="10px 5px"
+    actived={actived}
+    cursor="pointer"
+    onClick={handleClick}
+  >
     <Img
       width="80px"
       height="60px"
