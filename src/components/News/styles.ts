@@ -1,12 +1,18 @@
 import styled from 'styled-components';
 
+type MainWrapperProps = {
+  padding?: string;
+  height?: string;
+};
+
 export const MainWrapper = styled.div`
+  height: ${(props: MainWrapperProps) => props.height};
   background-color: #ffefe0;
   border-radius: 30px;
   display: block;
   margin: 0 40px 0;
   height: 150px;
-  padding: 0 30px;
+  padding: ${(props: MainWrapperProps) => props.padding};
   margin-bottom: 35px;
 `;
 
