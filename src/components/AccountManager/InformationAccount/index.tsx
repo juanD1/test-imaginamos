@@ -15,6 +15,7 @@ const InformactionAccount = ({ user, signOut }: Props) => (
       className="rounded-circle"
       src={user.photoURL}
       alt="user"
+      width="50%"
       margin="auto"
       display="block"
     />

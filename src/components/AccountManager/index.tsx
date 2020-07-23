@@ -27,8 +27,8 @@ const AccountManager = ({ user, showAuth, setShowAccountManager }: Props) => {
     },
   };
 
-  const signOut = () => {
-    dispatch(actions.shoppingCar.clearShoppingCar);
+  const signOut = async () => {
+    await dispatch(actions.shoppingCar.clearShoppingCar());
     app.auth().signOut();
     setShowAccountManager(false);
   };

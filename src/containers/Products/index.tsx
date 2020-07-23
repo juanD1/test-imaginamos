@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useDispatch } from 'react-redux';
+import { AuthContext } from 'context/AuthContext';
 import ProductCard from 'components/ProductCard';
 import actions from 'states/actions';
 import { Products as TypeProduct } from 'types/products';
@@ -7,10 +8,11 @@ import { PRODUCTS } from 'constants/products';
 import { Wrapper } from 'styles/globalStyles';
 
 const Products = () => {
+  const user = useContext(AuthContext);
   const dispatch = useDispatch();
 
   const addToShoppingCar = (product: TypeProduct) =>
-    dispatch(actions.shoppingCar.addProductRequest(product));
+    user && dispatch(actions.shoppingCar.addProductRequest(product));
 
   return (
     <Wrapper display="flex" padding="35px 0" overFlow="auto">
