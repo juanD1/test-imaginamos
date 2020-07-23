@@ -8,12 +8,20 @@ type Props = {
   options: Array<string>;
   backgroundColor?: string;
   color?: string;
+  mobileDesign?: boolean;
 };
 
-const Select = ({ icon, label, options, color, backgroundColor }: Props) => {
+const Select = ({
+  icon,
+  label,
+  options,
+  color,
+  backgroundColor,
+  mobileDesign,
+}: Props) => {
   return (
-    <Wrapper>
-      <SelectWrapper>
+    <Wrapper mobileDesign={mobileDesign || false}>
+      <SelectWrapper mobileDesign={mobileDesign || false}>
         <StyledSelect backgroundColor={backgroundColor} color={color}>
           {options.map((option, key) => (
             <option key={key}>{option}</option>

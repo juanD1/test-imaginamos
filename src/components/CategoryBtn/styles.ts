@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 type WrapperProps = {
   actived: boolean;
+  mobileDesign?: boolean;
 };
 
 export const Wrapper = styled.div`
-  width: 10%;
+  width: ${(props: WrapperProps) => (props.mobileDesign ? '100%' : '9.5%')};
   height: 150px;
   background-color: ${(props: WrapperProps) =>
     props.actived ? '#ffd645' : 'white'};
@@ -13,7 +14,10 @@ export const Wrapper = styled.div`
   padding-top: 10px;
   display: block;
   text-align: center;
-  margin-right: 20px;
+  margin-right: ${(props: WrapperProps) =>
+    props.mobileDesign ? '20px' : 'auto'};
+  /* margin-right: 20px; */
+  /* margin-right: auto; */
   display: inline-block;
   cursor: pointer;
 

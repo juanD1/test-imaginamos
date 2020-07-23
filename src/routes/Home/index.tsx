@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useMedia } from 'react-media';
+import { MEDIA_QUERIES } from 'constants/mediaQueries';
 import Header from 'components/Header';
 import Content from 'containers/Content';
 import Panel from 'containers/Panel';
 
 const Home = () => {
-  const [showShoppingCar, setShowShoppingCar] = useState<boolean>(true);
+  const matches = useMedia({ queries: MEDIA_QUERIES });
+  const [showShoppingCar, setShowShoppingCar] = useState<boolean>(
+    matches.small ? false : true,
+  );
+
+  useEffect(() => {
+    matches.small && setShowShoppingCar(false);
+  }, [matches]);
 
   const handleDisplay = () => {
     setShowShoppingCar(!showShoppingCar);

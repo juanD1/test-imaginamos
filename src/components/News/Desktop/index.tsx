@@ -6,7 +6,7 @@ import { Img, Label } from 'styles/globalStyles';
 import { MainWrapper, LearnMoreContiner } from '../styles';
 
 const DesktopNews = () => (
-  <MainWrapper padding="0 30px">
+  <MainWrapper height="150px" padding="0 30px" margin="0 40px 0">
     <div className="row">
       <div className="col col-lg-3 col-sm-3">
         <Img

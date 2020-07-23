@@ -1,4 +1,6 @@
 import React from 'react';
+import { useMedia } from 'react-media';
+import { MEDIA_QUERIES } from 'constants/mediaQueries';
 import { Categories } from 'types/categories';
 import { Wrapper, ImgWrapper } from './styles';
 import { Img, Label } from 'styles/globalStyles';
@@ -15,8 +17,10 @@ const CategoryBtn = ({
   actived,
   handleClick,
 }: CategoryBtnProps & Categories) => {
+  const matches = useMedia({ queries: MEDIA_QUERIES });
   return (
     <Wrapper
+      mobileDesign={matches.small}
       actived={actived}
       onClick={() => handleClick({ categoryKey, name, icon })}
     >

@@ -1,12 +1,22 @@
 import styled from 'styled-components';
 
+type WrapperProps = {
+  mobileDesign?: boolean;
+};
+
 export const Wrapper = styled.div`
   position: relative;
+  margin-top: ${(props: WrapperProps) => props.mobileDesign && '10px'};
 `;
+
+type SelectWrapperProps = {
+  mobileDesign?: boolean;
+};
 
 export const SelectWrapper = styled.div`
   position: relative;
-  width: 100%;
+  width: ${(props: SelectWrapperProps) =>
+    props.mobileDesign ? '55vw' : '100%'};
 
   ::after {
     font-family: FontAwesome;
