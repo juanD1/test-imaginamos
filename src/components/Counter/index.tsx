@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import actions from 'states/actions';
 import { Products } from 'types/products';
@@ -11,15 +11,14 @@ type Props = {
 
 const Counter = (props: Props) => {
   const dispatch = useDispatch();
-  const [quantity, setQuantity] = useState<number>(1);
-
-  // const addQuantity = () => setQuantity(prevState => prevState + 1);
-
-  // const reduceQuantity = () =>
-  //   quantity > 0 && setQuantity(prevState => prevState - 1);
 
   const AddQuantityProduct = (product: Products) =>
     dispatch(actions.shoppingCar.AddQuantityRequest(product));
+
+  const SubtractQuantityProduct = (product: Products) =>
+    product.quantity !== 1
+      ? dispatch(actions.shoppingCar.SubtractQuantityRequest(product))
+      : dispatch(actions.shoppingCar.removeProductRequest(product));
 
   return (
     <Wrapper>
@@ -30,7 +29,7 @@ const Counter = (props: Props) => {
         padding="15px 10px"
         margin="auto"
         cursor="pointer"
-        // onClick={reduceQuantity}
+        onClick={() => SubtractQuantityProduct(props.product)}
       >
         -
       </Label>

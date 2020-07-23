@@ -1,26 +1,12 @@
 import * as actionTypes from './constants';
 import {
   ShoppingCarAction,
-  // GetShoppingCarAction,
-  // GetShoppingCarSuccessAction,
-  // GetShoppingCarFailureAction,
   AddProductAction,
-  // AddProductSuccessAction,
-  // AddProductFailureAction,
-  RemoveProductByIdAction,
+  RemoveProductAction,
   AddQuantityAction,
   SubtractQuantityAction,
-  // RemoveProductByIdSuccessAction,
-  // RemoveProductByIdFailureAction,
 } from 'types/states/shoppingCar';
 import { Products } from 'types/products';
-
-// export const getShoppingCarRequest = (): GetShoppingCarAction => {
-//   return {
-//     type: actionTypes.GET_SHOPPINGCAR_REQUEST,
-//     products
-//   };
-// };
 
 export const addProductRequest = (product: Products): AddProductAction => {
   return {
@@ -29,12 +15,12 @@ export const addProductRequest = (product: Products): AddProductAction => {
   };
 };
 
-export const removeProductByIdRequest = (
-  productId: number,
-): RemoveProductByIdAction => {
+export const removeProductRequest = (
+  product: Products,
+): RemoveProductAction => {
   return {
     type: actionTypes.REMOVE_PRODUCT_REQUEST,
-    productId,
+    product,
   };
 };
 

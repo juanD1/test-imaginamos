@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Products } from 'types/products';
 import { State } from 'types/states';
@@ -21,8 +21,11 @@ const ShippingList = () => {
   const products = useSelector<State, Products[]>(
     state => state.shoppingCar.products,
   );
-
   const total = useSelector<State, number>(state => state.shoppingCar.total);
+
+  useEffect(() => {
+    !products.length && setProduct(initialState);
+  }, [products]);
 
   return (
     <>

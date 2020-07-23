@@ -1,7 +1,7 @@
 import * as actionTypes from './constants';
 import {
   AddProductAction,
-  RemoveProductByIdAction,
+  RemoveProductAction,
   AddQuantityAction,
   SubtractQuantityAction,
   ShoppingCarState,
@@ -16,7 +16,7 @@ const initialState: ShoppingCarState = {
 
 const shoppingCarReducer = (
   state: ShoppingCarState = initialState,
-  action: AddProductAction | RemoveProductByIdAction,
+  action: AddProductAction | RemoveProductAction,
 ): ShoppingCarState => {
   switch (action.type) {
     case actionTypes.ADD_PRODUCT_REQUEST: {
@@ -45,11 +45,28 @@ const shoppingCarReducer = (
       }
     }
     case actionTypes.REMOVE_PRODUCT_REQUEST: {
-      return { ...state, shoppingCarAction: action.type };
+      const filteredProducts: Products[] | null =
+        state.products &&
+        state.products.filter(
+          product =>
+            product.productKey !==
+            (action as RemoveProductAction).product.productKey,
+        );
+
+      const newTotal =
+        state.total -
+        (action as RemoveProductAction).product.price *
+          (action as RemoveProductAction).product.quantity;
+
+      return {
+        ...state,
+        products: filteredProducts,
+        total: newTotal,
+        shoppingCarAction: action.type,
+      };
     }
     case actionTypes.ADD_QUANTITY_REQUEST: {
-      const updatedProducts: Products[] | undefined | null =
-        state.products &&
+      state.products &&
         state.products.map(product => {
           if (
             product.productKey ===
@@ -59,16 +76,32 @@ const shoppingCarReducer = (
           }
           return product;
         });
-      console.log('updatedProducts: ', updatedProducts);
       (action as AddQuantityAction).product.quantity += 1;
+
       return {
         ...state,
-        // products: [updatedProducts],
         total: state.total + (action as AddQuantityAction).product.price,
+        shoppingCarAction: action.type,
       };
     }
     case actionTypes.SUBTRACT_QUANTITY_REQUEST: {
-      return { ...state, shoppingCarAction: action.type };
+      state.products &&
+        state.products.map(product => {
+          if (
+            product.productKey ===
+            (action as SubtractQuantityAction).product.productKey
+          ) {
+            product.quantity -= 1;
+          }
+          return product;
+        });
+      (action as SubtractQuantityAction).product.quantity -= 1;
+
+      return {
+        ...state,
+        total: state.total - (action as SubtractQuantityAction).product.price,
+        shoppingCarAction: action.type,
+      };
     }
     case actionTypes.CLEAR_SHOPPINGCAR: {
       return { ...initialState };
