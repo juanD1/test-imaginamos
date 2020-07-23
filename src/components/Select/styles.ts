@@ -36,7 +36,6 @@ type StyledSelectProps = {
 
 export const StyledSelect = styled.select`
   width: 100%;
-
   border-radius: 50px;
   padding: 7px 0 7px 100px;
   outline: none !important;

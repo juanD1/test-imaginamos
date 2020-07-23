@@ -16,8 +16,6 @@ export const Wrapper = styled.div`
   text-align: center;
   margin-right: ${(props: WrapperProps) =>
     props.mobileDesign ? '20px' : 'auto'};
-  /* margin-right: 20px; */
-  /* margin-right: auto; */
   display: inline-block;
   cursor: pointer;
 
