@@ -1,4 +1,4 @@
-# test-Imaginamos (Shopping Car)
+# Test-Imaginamos (Shopping Car)
 
 ## Introducción 
 Este repositorio contiene un Single-page application con diseño responsive que permite agregar productos a un carrito de compras y cuenta con un modulo de Login con acceso mediante Google y Facebook.
@@ -34,4 +34,4 @@ Este repositorio contiene un Single-page application con diseño responsive que 
 * Firebase
 
 
-`This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+`This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).`
