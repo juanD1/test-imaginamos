@@ -34,4 +34,4 @@ Este repositorio contiene un Single-page application con diseño responsive que 
 * Firebase
 
 
-`This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).`
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
