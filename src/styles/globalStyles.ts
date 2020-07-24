@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 type WrapperProps = {
+  height?: string;
   padding?: string;
   display?: string;
   position?: string;
+  zIndex?: number;
   overFlow?: string;
   margin?: string;
   cursor?: string;
@@ -11,19 +13,23 @@ type WrapperProps = {
   right?: string;
   top?: string;
   actived?: boolean;
+  backgroundColor?: string;
 };
 
 export const Wrapper = styled.div`
+  height: ${(props: WrapperProps) => props.height};
   padding: ${(props: WrapperProps) => props.padding};
   display: ${(props: WrapperProps) => props.display};
   margin: ${(props: ImgProps) => props.margin};
   position: ${(props: WrapperProps) => props.position};
+  z-index: ${(props: WrapperProps) => props.zIndex};
   float: ${(props: WrapperProps) => props.float};
   overflow: ${(props: WrapperProps) => props.overFlow};
   right: ${(props: WrapperProps) => props.right};
   top: ${(props: WrapperProps) => props.top};
   border: ${(props: WrapperProps) => props.actived && '1px solid yellow'};
   border-radius: ${(props: WrapperProps) => props.actived && '20px'};
+  background-color: ${(props: WrapperProps) => props.backgroundColor};
   cursor: ${(props: WrapperProps) => props.cursor};
 `;
 

@@ -13,12 +13,17 @@ const Counter = (props: Props) => {
   const dispatch = useDispatch();
 
   const AddQuantityProduct = (product: Products) =>
+    product.productKey > 0 && // validation dummy
     dispatch(actions.shoppingCar.AddQuantityRequest(product));
 
-  const SubtractQuantityProduct = (product: Products) =>
-    product.quantity !== 1
-      ? dispatch(actions.shoppingCar.SubtractQuantityRequest(product))
-      : dispatch(actions.shoppingCar.removeProductRequest(product));
+  const SubtractQuantityProduct = (product: Products) => {
+    if (product.productKey > 0) {
+      // validation dummy
+      product.quantity > 0 && product.quantity !== 1
+        ? dispatch(actions.shoppingCar.SubtractQuantityRequest(product))
+        : dispatch(actions.shoppingCar.removeProductRequest(product));
+    }
+  };
 
   return (
     <Wrapper>

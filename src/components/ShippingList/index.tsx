@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { REMOVE_PRODUCT_REQUEST } from 'states/shoppingCar/constants';
 import { Products } from 'types/products';
 import { State } from 'types/states';
 import ShippingProduct from 'components/ShippingProduct';
@@ -22,10 +23,14 @@ const ShippingList = () => {
     state => state.shoppingCar.products,
   );
   const total = useSelector<State, number>(state => state.shoppingCar.total);
+  const shoppingCarAction = useSelector<State, string | null>(
+    state => state.shoppingCar.shoppingCarAction,
+  );
 
   useEffect(() => {
-    !products.length && setProduct(initialState);
-  }, [products]);
+    (!products.length || shoppingCarAction === REMOVE_PRODUCT_REQUEST) &&
+      setProduct(initialState);
+  }, [products, shoppingCarAction]);
 
   return (
     <>
@@ -75,7 +80,7 @@ const ShippingList = () => {
                 letterSpacing="0"
                 float="right"
               >
-                {total}
+                ${total.toFixed(2)}
               </Label>
             </div>
           </div>
