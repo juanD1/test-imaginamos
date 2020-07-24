@@ -5,5 +5,6 @@ export type Products = {
   time?: string;
   quantity: number;
   price: number;
+  category?: string;
   image: string;
 };
