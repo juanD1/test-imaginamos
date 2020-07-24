@@ -18,7 +18,7 @@ Este repositorio contiene un Single-page application con diseño responsive que 
 
 ### Front-end
 * Responsive design.
-* *Interacción segura* la interaccion con el carrito de compras solo se permitira si existe un sesion de usuario.
+* **_Interacción segura_**. La interaccion con el carrito de compras solo se permitira si existe un sesion de usuario.
 * Almacenamiento de datos en localStorage con la libreria `redux-persist` para mantener la sesión del usuario activa.
 
 ### Tecnologias Usadas.
